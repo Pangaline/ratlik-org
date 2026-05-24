@@ -1,0 +1,89 @@
+/* ========================================
+   RATLIK.ORG — CARDS.CSS
+   Стили карточек статей (для главной страницы)
+   ======================================== */
+
+/* --- СЕТКА КАРТОЧЕК (3 колонки) --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* --- КАРТОЧКА --- */
+.card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    padding: 0 0 24px 0;
+    border: 1px solid rgba(191, 164, 102, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(191, 164, 102, 0.5);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* --- КАРТИНКА (ВЕРТИКАЛЬНАЯ, НЕ ОБРЕЗАЕТСЯ) --- */
+.card-image {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(191, 164, 102, 0.2);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.03);
+}
+
+/* --- ТЕКСТОВАЯ ЧАСТЬ --- */
+.card-content {
+    padding: 0 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #f9b400;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #d0d0d0;
+    line-height: 1.5;
+    flex: 1;
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

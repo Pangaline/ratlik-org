@@ -1,0 +1,148 @@
+/* ========================================
+   RATLIK.ORG — FOOTER.CSS
+   Стили подвала сайта
+   ======================================== */
+
+.footer-contacts {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    border-radius: 24px 24px 0 0;
+    padding: 48px 36px;
+    margin-top: 60px;
+    border: 1px solid rgba(191, 164, 102, 0.2);
+    border-bottom: none;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+
+.footer-inner h4 {
+    font-family: 'Nunito', sans-serif;
+    color: #bfa466;
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer-inner p {
+    color: #d0d0d0;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.footer-inner a {
+    color: #f9b400;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-inner a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #bfa466;
+}
+
+/* ========================================
+   КНОПКИ В ФУТЕРЕ
+   ======================================== */
+
+.footer-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 5px 0;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #bfa466;
+}
+
+.footer-btn--call {
+    background: #bfa466;
+    color: #0a0a0a;
+}
+
+.footer-btn--call:hover {
+    background: transparent;
+    color: #bfa466;
+    text-decoration: none;
+}
+
+.footer-btn--write {
+    background: transparent;
+    color: #bfa466;
+}
+
+.footer-btn--write:hover {
+    background: #bfa466;
+    color: #0a0a0a;
+    text-decoration: none;
+}
+
+/* ========================================
+   КОПИРАЙТ
+   ======================================== */
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(191, 164, 102, 0.15);
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    width: 100%;
+}
+
+/* ========================================
+   АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ
+   ======================================== */
+@media (max-width: 700px) {
+    .footer-contacts {
+        padding: 36px 24px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-col {
+        flex: 1 1 auto;
+    }
+
+    .footer-inner h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-contacts {
+        padding: 30px 18px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .copyright {
+        margin-top: 30px;
+        font-size: 0.75rem;
+    }
+}

@@ -1,1 +1,569 @@
+/* ========================================
+   RATLIK.ORG — MAIN.CSS
+   Базовые стили + темы + единый текстовый блок
+   ======================================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    font-weight: 300;
+    position: relative;
+}
+
+/* ========================================
+   ТЁМНАЯ ТЕМА
+   ======================================== */
+
+body.theme-dark {
+    background: linear-gradient(90deg, #36485c 0%, #5f7080 100%);
+    color: #ffffff;
+}
+
+body.theme-dark .corner-portrait {
+    position: absolute;
+    top: 51px;
+    right: 150px;
+    width: 150px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+body.theme-dark .corner-portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body.theme-dark .multicolor-title {
+    color: #ffffff;
+}
+
+body.theme-dark .subhead {
+    color: #d0d0d0;
+    border-left: none;
+    padding-left: 0;
+}
+
+body.theme-dark .section-title {
+    color: #ffffff;
+}
+
+/* ЕДИНЫЙ ТЕКСТОВЫЙ БЛОК (тёмная тема) */
+body.theme-dark .text-block {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    padding: 36px 40px;
+    border: 1px solid rgba(191, 164, 102, 0.2);
+    border-left: 4px solid #bfa466;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+body.theme-dark .text-block p {
+    color: #e8e8e8;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+body.theme-dark .text-block p:last-child {
+    margin-bottom: 0;
+}
+
+body.theme-dark .text-block h2 {
+    color: #f9b400;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+}
+
+/* ========================================
+   СВЕТЛАЯ ТЕМА
+   ======================================== */
+
+body.theme-light {
+    background: #fafafa;
+    color: #1a1a1a;
+}
+
+body.theme-light .corner-portrait {
+    display: none;
+}
+
+body.theme-light .multicolor-title {
+    color: #0a0a0a;
+}
+
+body.theme-light .subhead {
+    color: #555;
+    border-left: none;
+    padding-left: 0;
+}
+
+body.theme-light .section-title {
+    color: #0a0a0a;
+}
+
+/* ЕДИНЫЙ ТЕКСТОВЫЙ БЛОК (светлая тема) */
+body.theme-light .text-block {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px 40px;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #bfa466;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+body.theme-light .text-block p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+body.theme-light .text-block p:last-child {
+    margin-bottom: 0;
+}
+
+body.theme-light .text-block h2 {
+    color: #0a0a0a;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+}
+
+/* ========================================
+   ОСНОВНОЙ КОНТЕЙНЕР
+   ======================================== */
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+/* ========================================
+   ЗАГОЛОВКИ
+   ======================================== */
+
+.multicolor-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+.multicolor-title .accent-part {
+    color: #f9b400;
+    font-style: normal;
+}
+
+.subhead {
+    font-size: 1.1rem;
+    margin-bottom: 48px;
+    font-weight: 300;
+}
+
+/* ========================================
+   ЗАГОЛОВОК СЕКЦИИ
+   ======================================== */
+
+.section-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.accent-border {
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* ========================================
+   ЗОЛОТОЙ АКЦЕНТ ДЛЯ ЧЕШСКИХ СЛОВ
+   (должен идти ПОСЛЕ общих стилей для p,
+   чтобы переопределить цвет)
+   ======================================== */
+
+.text-block .accent,
+.standard-content .accent {
+    color: #f9b400;
+    font-style: italic;
+}
+
+/* ========================================
+   ХЛЕБНЫЕ КРОШКИ
+   ======================================== */
+
+.breadcrumbs {
+    margin-bottom: 24px;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    color: #bfa466;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #f9b400;
+}
+
+.breadcrumbs span {
+    color: #d0d0d0;
+}
+
+/* ========================================
+   РАСКРЫВАЮЩАЯСЯ ПЛАШКА (details/summary)
+   ======================================== */
+
+.standard-details {
+    margin: 20px 0 40px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+body.theme-dark .standard-details {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(191, 164, 102, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+body.theme-light .standard-details {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.standard-summary {
+    padding: 24px 32px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: background 0.2s ease;
+    border-left: 4px solid #bfa466;
+}
+
+body.theme-dark .standard-summary {
+    color: #f9b400;
+}
+
+body.theme-light .standard-summary {
+    color: #0a0a0a;
+}
+
+.standard-summary:hover {
+    background: rgba(191, 164, 102, 0.05);
+}
+
+.summary-icon {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    color: #bfa466;
+}
+
+.standard-details[open] .summary-icon {
+    transform: rotate(90deg);
+}
+
+.standard-content {
+    padding: 8px 32px 32px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+body.theme-dark .standard-content {
+    color: #d0d0d0;
+}
+
+body.theme-light .standard-content {
+    color: #333;
+}
+
+.standard-content h4 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #bfa466;
+}
+
+.standard-content p {
+    margin-bottom: 12px;
+}
+
+/* ========================================
+   TWO COLUMNS
+   ======================================== */
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   FORM CARD
+   ======================================== */
+
+.form-card {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid rgba(191, 164, 102, 0.2);
+}
+
+.form-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #f9b400;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(191, 164, 102, 0.25);
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f9b400;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #bfa466;
+    color: #0a0a0a;
+    border: none;
+    padding: 14px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background: #d4b872;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SEO BLOCK
+   ======================================== */
+
+.seo-block {
+    max-width: 100%;
+    margin: 60px 0 40px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    border-left: 4px solid #bfa466;
+}
+
+.seo-block h3 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    color: #f9b400;
+}
+
+.seo-block p {
+    color: #c0c0c0;
+    margin-bottom: 16px;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.seo-block strong {
+    color: #bfa466;
+}
+
+/* ========================================
+   FOOTER BUTTONS
+   ======================================== */
+
+.footer-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0 40px;
+}
+
+.btn-footer {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-footer-call {
+    background: #bfa466;
+    color: #0a0a0a;
+    border: 1px solid #000000;
+}
+
+.btn-footer-call:hover {
+    background: #d4b872;
+    transform: translateY(-2px);
+    color: #0a0a0a;
+}
+
+.btn-footer-write {
+    border: 1px solid rgba(191, 164, 102, 0.5);
+    color: #ffffff;
+    background: transparent;
+}
+
+.btn-footer-write:hover {
+    border-color: #bfa466;
+    background: rgba(191, 164, 102, 0.1);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* ========================================
+   STATS
+   ======================================== */
+
+.stats-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 0 20px;
+    border-top: 1px solid rgba(191, 164, 102, 0.2);
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #f9b400;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   АДАПТАЦИЯ
+   ======================================== */
+
+@media (max-width: 900px) {
+    body.theme-dark .corner-portrait {
+        display: none;
+    }
+    .multicolor-title {
+        font-size: 2.5rem;
+    }
+    .main-content {
+        padding: 0 20px 40px;
+    }
+    .text-block {
+        padding: 28px 24px;
+    }
+    .two-columns {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .stats-bottom {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-bottom {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .footer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-footer {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    .seo-block {
+        padding: 28px 24px;
+    }
+    .seo-block h3 {
+        font-size: 1.3rem;
+    }
+    .form-card {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .multicolor-title {
+        font-size: 2.2rem;
+    }
+    .subhead {
+        font-size: 1rem;
+        margin-bottom: 32px;
+        padding-left: 16px;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .text-block {
+        padding: 20px 18px;
+    }
+}

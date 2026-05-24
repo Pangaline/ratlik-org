@@ -1,0 +1,164 @@
+/* ========================================
+   RATLIK.ORG — HEADER.CSS
+   Стили шапки сайта
+   ======================================== */
+
+.site-header {
+    display: block;
+    width: 100%;
+}
+
+.menu-horizontal-wave {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    padding: 20px 32px;
+    margin-bottom: 40px;
+    border-radius: 0 0 24px 24px;
+    border-bottom: 2px solid rgba(191, 164, 102, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: all 0.35s ease;
+    white-space: nowrap;
+}
+
+.menu-link span {
+    padding: 8px 12px;
+}
+
+.menu-svg {
+    width: 90px;
+    height: 18px;
+    opacity: 0;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    transform: translateY(-5px);
+}
+
+.menu-svg path {
+    stroke: #bfa466;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.menu-link:hover {
+    color: #f9b400;
+    transform: translateY(-3px);
+}
+
+.menu-link:hover .menu-svg {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-link.active {
+    color: #f9b400;
+    pointer-events: none;
+}
+
+.menu-link.active .menu-svg {
+    opacity: 1;
+}
+
+/* ========================================
+   АДАПТАЦИЯ ПОД ПЛАНШЕТЫ (≤900px)
+   ======================================== */
+@media (max-width: 900px) {
+    .menu-horizontal-wave {
+        padding: 16px 20px;
+        margin-bottom: 30px;
+    }
+
+    .menu-container {
+        gap: 20px;
+    }
+
+    .menu-link {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+    .menu-svg {
+        width: 70px;
+        height: 14px;
+    }
+}
+
+/* ========================================
+   АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ (≤600px)
+   ======================================== */
+@media (max-width: 600px) {
+    .menu-horizontal-wave {
+        padding: 14px 12px;
+        border-radius: 0 0 18px 18px;
+        margin-bottom: 24px;
+    }
+
+    .menu-container {
+        gap: 8px;
+        justify-content: space-around;
+    }
+
+    .menu-link {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        flex: 0 1 auto;
+        min-width: 55px;
+    }
+
+    .menu-link span {
+        padding: 4px 4px;
+    }
+
+    .menu-svg {
+        width: 45px;
+        height: 10px;
+    }
+}
+
+/* ========================================
+   АДАПТАЦИЯ ПОД МАЛЕНЬКИЕ ЭКРАНЫ (≤400px)
+   ======================================== */
+@media (max-width: 400px) {
+    .menu-horizontal-wave {
+        padding: 12px 8px;
+    }
+
+    .menu-container {
+        gap: 4px;
+    }
+
+    .menu-link {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+        min-width: 45px;
+    }
+
+    .menu-svg {
+        width: 35px;
+        height: 8px;
+    }
+}
